@@ -26,6 +26,10 @@ export default {
   },
   middleware: "notAuthenticated",
   methods: {
+    // async fetchUser(username){
+    //   const res = await axios.get("http://localhost:3000/users/"+username, {headers: { "Authorization": this.$store.getters.getToken}});
+    //   this.$store.commit("setUser", res.data)
+    // },
     postLogin() {
       let bodyFormData = new FormData();
       bodyFormData.set("email", this.email);
@@ -41,6 +45,7 @@ export default {
           const auth = { accessToken: response.data.token };
           this.$store.commit("setAuth", auth); // mutating to store for client rendering
           Cookie.set("auth", auth); // saving token in cookie for server rendering
+          // this.fetchUser(response.data.username);
           this.$router.push("/");
         })
         .catch(response => {

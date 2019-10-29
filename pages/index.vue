@@ -3,7 +3,7 @@
     <div v-if="$store.state.auth">
       <p>
         You are authenticated. You can see the
-        <NuxtLink to="/secret">
+        <NuxtLink to="user/secret">
           secret page
         </NuxtLink>!
       </p>

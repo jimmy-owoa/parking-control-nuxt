@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>This is secret page.</h1>
+    {{ this.$store.getters.getUser }}
     <NuxtLink to="/">
       Back home
     </NuxtLink>
@@ -8,7 +9,14 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
-  middleware: 'authenticated'
+  layout: 'user',
+  middleware: 'authenticated',
+  data(){
+    return {
+      user: ""
+    }
+  },
 }
 </script>
