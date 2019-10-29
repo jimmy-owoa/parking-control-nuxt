@@ -1,6 +1,6 @@
 # parking-control
 
-> parking control
+> This is an application for have control of a vehicles parking, it's very simple and works with parking lots where the owners repeatedly use it, example: a chruch, a building, etc. The application consists of find to the owner of a vehicle in case that is needed move his vehicle because it's obstructing to another car. The application provides contact information of the owner like the phone, name, his local of an chruch or tower of the building.
 
 ## Build Setup
 
